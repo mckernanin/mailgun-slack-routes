@@ -1,5 +1,8 @@
-# Mailgun Slack Routes
+## Mailgun Slack Routes
 ### Easily connect an email address to a slack channel
+
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 Simple node script to route an email address (configured in mailgun) to a slack channel. By default this delivers to your personal DM channel on Slack. You'll have to define an environment variable for the Slack webhook, SLACK_URL.
 
