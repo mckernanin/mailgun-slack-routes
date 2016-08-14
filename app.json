@@ -1,0 +1,7 @@
+{
+  "name": "Mailgun Slack Routes",
+  "description": "Easily connect an email address to a slack channel",
+  "repository": "https://github.com/mckernanin/mailgun-slack-routes",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "express", "slack", "mailgun"]
+}
