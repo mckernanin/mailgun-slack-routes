@@ -11,8 +11,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-	console.log(req.query);
 	res.render('index');
+});
+
+app.get('/email', function(req, res) {
+	res.render('email');
 });
 
 app.post('/email', function(req, res) {
