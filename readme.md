@@ -7,4 +7,4 @@ On the command line: `SLACK_URL=https://slack.com/webhook/url/here node server.j
 On Heroku: [Configuration and Config Vars](https://devcenter.heroku.com/articles/config-vars)
 
 Here's what a message looks like in Slack:
-!(image)[public/img/example-message.png]
+![image](public/img/example-message.png)
