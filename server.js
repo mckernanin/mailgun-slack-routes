@@ -20,32 +20,34 @@ app.get('/email', function(req, res) {
 
 app.post('/email', function(req, res) {
 	var mail = req.body;
-	slack.send({
-		text: 'Email',
-		icon_emoji: ':envelope:',
-		username: mail.recipient,
-		attachments: [
-			{
-				fallback: 'Incoming email from ' + mail.sender + ' titled ' + mail.subject,
-				color: 'good',
-				fields: [
-					{
-						title: 'Sender',
-						value: mail.sender
-					},
-					{
-						title: 'Subject',
-						value: mail.subject
-					},
-				],
-			},
-			{
-				fallback: 'Email content',
-				text: mail['body-plain']
-			},
-		],
+	if (mail.subject) {
+		slack.send({
+			text: mail.subject,
+			icon_emoji: ':envelope:',
+			username: mail.recipient,
+			attachments: [
+				{
+					fallback: 'Incoming email from ' + mail.sender + ' titled ' + mail.subject,
+					color: 'good',
+					fields: [
+						{
+							title: 'Sender',
+							value: mail.sender
+						},
+						{
+							title: 'Subject',
+							value: mail.subject
+						},
+					],
+				},
+				{
+					fallback: 'Email content',
+					text: mail['body-plain']
+				},
+			],
 
-	});
+		});
+	}
 	res.sendStatus(200);
 });
 
