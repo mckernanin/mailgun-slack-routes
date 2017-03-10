@@ -1,6 +1,8 @@
 ## Mailgun Slack Routes
 ### Easily connect an email address to a slack channel
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mckernanin/mailgun-slack-routes.svg)](https://greenkeeper.io/)
+
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
